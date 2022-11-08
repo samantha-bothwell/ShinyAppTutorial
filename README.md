@@ -68,6 +68,10 @@ runApp("App Name")
 
 or by clicking the `Run App` button at the top of your R window
 
+<p align="center">
+  <img src="README_files/run-app.png" width="700">
+</p>
+
 ## Designing the UI
 
 ### Theme and Title 
