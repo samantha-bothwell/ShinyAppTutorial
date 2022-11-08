@@ -152,7 +152,37 @@ Notice that in each tabPanel, we specify the plot that will go on that tab. If i
 
 ## Designing the Server
 
-Before setting code up in the server, I usually run it within an R script to make sure everything works well. It's easier to modify your code outside of the app then when you're working within the server code. 
+Before setting code up in the server, I usually run it within an R script to make sure everything works well. It's easier to modify your code outside of the app then when you're working within the server code. We are designing 4 plots with the following skeleton 
+
+``` r 
+server <- function(input, output) {
+
+    # Brewery Density Map Plot
+    output$plot1 <- renderPlot({
+        
+    # Set Height and Width of map plot    
+    }, height = 800, width = 1200)
+    
+    # Pie Chart
+    output$plot2 <- renderPlotly({
+      
+
+    })
+    
+    # ABV Plot
+    output$plot3 <- renderPlotly({
+      
+
+    })
+    
+    # IBU Plot
+    output$plot4 <- renderPlotly({
+      
+      
+    })
+    
+}
+```
 
 ### Brewery Density 
 
