@@ -8,7 +8,7 @@ To begin, create a folder that will house your app code and data file. You can e
 
 You can also start your Shiny App from scratch within R. Select 'File > New File > Shiny Web App...'. 
 
-
+![](README_files/figure-gfm/create_app.png)<!-- -->
 
 The following are the packages we will use within the app. 
 
