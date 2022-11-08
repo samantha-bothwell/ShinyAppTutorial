@@ -149,11 +149,13 @@ Notice that in each tabPanel, we specify the plot that will go on that tab. If i
   <img src="README_files/panels.png" width="500">
 </p>
 
-### Plot Design
 
 ## Designing the Server
 
 Before setting code up in the server, I usually run it within an R script to make sure everything works well. It's easier to modify your code outside of the app then when you're working within the server code. 
+
+### Brewery Density 
+
 
 ## Connecting the App a
 Create an account at https://www.shinyapps.io/
