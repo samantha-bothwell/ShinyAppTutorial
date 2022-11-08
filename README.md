@@ -4,7 +4,7 @@ This is a Shiny App Tutorial put together for the Department of Biostatistics at
 
 ## Creating Your Shiny App
 
-To begin, create a folder that will house your app code and data file. You can either use the skeleton code, provided in the Shiny_Skeleton folder, and build the app manually or refer to my completed app in the Shiny_Complete folder. Once you download the folder, you'll want to change the folder's name as it will be the domain name for the app. 
+To begin, create a folder that will house your app code and data file. You can either use the skeleton code, provided in the `Shiny_Skeleton` folder, and build the app manually or refer to my completed app in the `Shiny_Complete` folder. Once you download the folder, you'll want to change the folder's name as it will be the domain name for the app. 
 
 You can also start your Shiny App from scratch within R. Select 'File > New File > Shiny Web App...'. We are going to use a single 'app.R' file for this tutorial. For more complicated apps, it's recommended to use a separate 'server.R' and 'ui.R' file. 
 
