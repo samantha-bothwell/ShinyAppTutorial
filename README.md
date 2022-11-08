@@ -24,6 +24,7 @@ The following are the packages we will use within the app.
 
 ``` r
 ## Libraries 
+library(shiny)
 library(shinythemes)
 library(plotly)
 library(tidyverse)
@@ -39,6 +40,33 @@ To read in the data, don't include a path to a directory. The dataset just needs
 ## Data
 df <- readRDS("beers_clean.rds")
 ```
+
+The basic skeleton of any Shiny App will be 
+
+``` r 
+library(shiny) 
+
+# Define UI ----
+ui <- fluidPage(
+  
+)
+
+# Define server logic ----
+server <- function(input, output) {
+  
+}
+
+# Run the app ----
+shinyApp(ui = ui, server = server)
+```
+
+When you're ready, you can run even an empty ShinyApp either by running 
+
+``` r 
+runApp("App Name")
+```
+
+or by clicking the `Run App` button at the top of your R window
 
 ## Designing the UI
 
@@ -59,7 +87,7 @@ titlePanel("US Beers and Breweries"),
 
 ### Sidebar Design
 
-The Sidebar panel can be customized in a number of ways, called [widgets](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/). 
+The Sidebar panel can be customized in a number of ways, referred to as [widgets](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/). 
 
 <p align="center">
   <img src="README_files/sidebar-opts.png" width="700">
