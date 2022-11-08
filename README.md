@@ -9,7 +9,7 @@ To begin, create a folder that will house your app code and data file. You can e
 You can also start your Shiny App from scratch within R. Select 'File > New File > Shiny Web App...'. We are going to use a single 'app.R' file for this tutorial. For more complicated apps, it's recommended to use a separate 'server.R' and 'ui.R' file. 
 
 <p align="center">
-  <img src="README_files/create-app.png" width="500">
+  <img src="README_files/create-app.png" width="700">
 </p>
 
 Each Shiny App is comprised of a `ui` and a `server` component. 
@@ -121,7 +121,7 @@ sidebarLayout(
 This code produces the following sidebar 
 
 <p align="center">
-  <img src="README_files/sidebar-config.png" width="700">
+  <img src="README_files/sidebar-config.png" width="500">
 </p>
 
 In the `sidebarLayout` function, we can also specify the Tab 
