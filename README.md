@@ -59,6 +59,8 @@ titlePanel("US Beers and Breweries"),
 
 ### Sidebar Design
 
+The Sidebar panel can be customized in a number of ways. 
+
 ### Plot Design
 
 ## Designing the Server
