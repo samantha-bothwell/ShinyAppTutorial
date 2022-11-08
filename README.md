@@ -61,6 +61,12 @@ titlePanel("US Beers and Breweries"),
 
 The Sidebar panel can be customized in a number of ways. 
 
+<p align="center">
+  <img src="README_files/sidebar-opts.png" width="700">
+</p>
+
+*http://juliawrobel.com/tutorials/shiny_tutorial_nba.html*
+
 ### Plot Design
 
 ## Designing the Server
