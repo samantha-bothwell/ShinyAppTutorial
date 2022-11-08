@@ -130,6 +130,23 @@ In the `sidebarLayout` function, we can also specify the Tabs and which plots wi
 * Beer Types : A pie chart of the proportion of beer types within the entire US or an individual state.
 * ABV and IBU : Boxplots of ABV and IBU by beer type across the entire US or an individual state. Here, you can select which beer types you want to look at. 
 
+We'll wrap up the `sidebarLayout` function with the following code 
+
+``` r
+        mainPanel(
+            navbarPage(" ",
+                 tabPanel("Brewery Density", plotOutput('plot1')),
+                 tabPanel("Beer Types", plotlyOutput('plot2', width = "800px", height = "800px")),
+                 tabPanel("ABV and IBU", plotlyOutput('plot3'), plotlyOutput('plot4'))
+            )
+        )
+    )
+```
+
+Notice that in each tabPanel, we specify the plot that will go on that tab. If it's a regular `plot` or `ggplot` object, you can use `plotOutput`. If it is a `plotly` object, as we have for the 2nd and 3rd tabs, you will need to use `plotlyOutput`. In this function, you can also specify the width and height of the plot. We end up with the following panels : 
+
+
+
 ### Plot Design
 
 ## Designing the Server
