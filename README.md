@@ -33,7 +33,12 @@ library(ggplot2)
 library(ggrepel)
 ```
 
-To read in the data, don't include a path to a directory. The dataset just needs to be within the folder 
+To read in the data, don't include a path to a directory. The dataset just needs to be within the folder. 
+
+``` r 
+## Data
+df <- readRDS("beers_clean.rds")
+```
 
 ## Connecting the App a
 Create an account at https://www.shinyapps.io/
