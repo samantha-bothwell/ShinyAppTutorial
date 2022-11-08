@@ -59,7 +59,7 @@ titlePanel("US Beers and Breweries"),
 
 ### Sidebar Design
 
-The Sidebar panel can be customized in a number of ways. 
+The Sidebar panel can be customized in a number of ways, called [widgets](https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/). 
 
 <p align="center">
   <img src="README_files/sidebar-opts.png" width="700">
