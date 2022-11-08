@@ -146,7 +146,7 @@ We'll wrap up the `sidebarLayout` function with the following code
 Notice that in each tabPanel, we specify the plot that will go on that tab. If it's a regular `plot` or `ggplot` object, you can use `plotOutput`. If it is a `plotly` object, as we have for the 2nd and 3rd tabs, you will need to use `plotlyOutput`. In this function, you can also specify the width and height of the plot. We end up with the following panels : 
 
 <p align="center">
-  <img src="README_files/panels.png" width="700">
+  <img src="README_files/panels.png" width="500">
 </p>
 
 ### Plot Design
