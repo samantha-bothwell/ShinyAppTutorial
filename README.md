@@ -118,13 +118,17 @@ sidebarLayout(
         ),
 ```
 
-This code produces the following sidebar 
+This code produces the following sidebar, which has an option for "All States" and lists each individual state and has all beer types selected. 
 
 <p align="center">
   <img src="README_files/sidebar-config.png" width="500">
 </p>
 
-In the `sidebarLayout` function, we can also specify the Tab 
+In the `sidebarLayout` function, we can also specify the Tabs and which plots will belong to each Tab. For our app, we'll have 3 tabs : 
+
+* Brewery Density : A heatmap of brewery counts for the entire US, if "All States" is selected, or counties within a State. 
+* Beer Types : A pie chart of the proportion of beer types within the entire US or an individual state.
+* ABV and IBU : Boxplots of ABV and IBU by beer type across the entire US or an individual state. Here, you can select which beer types you want to look at. 
 
 ### Plot Design
 
