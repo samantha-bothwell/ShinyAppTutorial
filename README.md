@@ -120,7 +120,9 @@ sidebarLayout(
 
 This code produces the following sidebar 
 
-
+<p align="center">
+  <img src="README_files/sidebar-config.png" width="700">
+</p>
 
 In the `sidebarLayout` function, we can also specify the Tab 
 
