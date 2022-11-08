@@ -72,6 +72,8 @@ or by clicking the `Run App` button at the top of your R window
   <img src="README_files/run-app.png" width="700">
 </p>
 
+*https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/*
+
 ## Designing the UI
 
 ### Theme and Title 
@@ -98,6 +100,29 @@ The Sidebar panel can be customized in a number of ways, referred to as [widgets
 </p>
 
 *http://juliawrobel.com/tutorials/shiny_tutorial_nba.html*
+
+In our app, we are going to have two types of selections; a drop down list for the state and a multiple selection radio button for beer type. We will specify this in our `ui` code with the following 
+
+``` r 
+sidebarLayout(
+        sidebarPanel(
+            # Drop down selection for State
+            selectInput("state_choice", label = "Select State",
+                choices = c("All States", unique(df$state)), 
+                selected = character(0)),
+            
+            # Drop down selection for Beer Type
+            checkboxGroupInput("beer_choice", label = "Select Beer Type",
+                 choices = c(unique(df$style)), 
+                 selected = c(unique(df$style)))
+        ),
+```
+
+This code produces the following sidebar 
+
+
+
+In the `sidebarLayout` function, we can also specify the Tab 
 
 ### Plot Design
 
