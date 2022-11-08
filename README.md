@@ -14,6 +14,10 @@ You can also start your Shiny App from scratch within R. Select 'File > New File
 
 Each Shiny App is comprised of a `ui` and a `server` component. 
 
+* `ui` : The user interface defines how the app will look, including color theme, sidebar panel options, tab layouts, and figure/text layouts. 
+* `server` : The server contains the instructions to create the app. This is where you can build plots for the app.
+
+
 ## Setting Up the App Workspace
 
 The following are the packages we will use within the app. 
