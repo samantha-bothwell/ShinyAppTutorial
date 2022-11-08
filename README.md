@@ -40,6 +40,31 @@ To read in the data, don't include a path to a directory. The dataset just needs
 df <- readRDS("beers_clean.rds")
 ```
 
+## Designing the UI
+
+### Theme and Title 
+
+One fun customization you can make within your Shiny App is the theme. I have a preference for the `flatly` theme. You can explore more theme options at https://rstudio.github.io/shinythemes/.
+
+Each application needs a title, which you can specify with the `titlePanel` function. 
+
+``` r
+# Set theme
+theme = shinytheme("flatly"),
+
+# Application title
+titlePanel("US Beers and Breweries"),
+    
+```
+
+### Sidebar Design
+
+### Plot Design
+
+## Designing the Server
+
+Before setting code up in the server, I usually run it within an R script to make sure everything works well. It's easier to modify your code outside of the app then when you're working within the server code. 
+
 ## Connecting the App a
 Create an account at https://www.shinyapps.io/
 
