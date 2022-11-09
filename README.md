@@ -4,6 +4,21 @@ This is a Shiny App Tutorial put together for the Department of Biostatistics at
 
 ## Data Summary
 
+The beers dataset contains 12 variables, cleaned from the datasets provided on kaggle. Code used to clean the data is provided in the `sa_tutorial_datacleaning.R` file. The variables represent 
+
+* state : The two character state initial
+* county : County of the brewery location
+* city : City of the brewery location 
+* abv : The alcohol percentage of the beer
+* ibu : The international bitterness unit of the beer 
+* id : ID given to each unique beer
+* name : Name of the beer 
+* style : Style of the beer 
+* brewery_id : ID given to each unique brewery 
+* ounces : The fluid ounces the beer is served as
+* brewery : The brewery name the beer comes from 
+* fips : An county and state identifier. The first two digits correspond to state and the final 3 correspond to county. 
+
 <p align="center">
   <img src="README_files/data.png" width="1000">
 </p>
