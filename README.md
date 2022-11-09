@@ -5,7 +5,7 @@ This is a Shiny App Tutorial put together for the Department of Biostatistics at
 ## Data Summary
 
 <p align="center">
-  <img src="README_files/data.png" width="700">
+  <img src="README_files/data.png" width="1000">
 </p>
 
 ## Creating Your Shiny App
