@@ -6,7 +6,7 @@ This is a Shiny App Tutorial put together for the Department of Biostatistics at
 
 The beers dataset contains 12 variables, cleaned from the datasets provided on kaggle. Code used to clean the data is provided in the `sa_tutorial_datacleaning.R` file. The variables represent 
 
-* state : The two character state initial
+* `state` : The two character state initial
 * county : County of the brewery location
 * city : City of the brewery location 
 * abv : The alcohol percentage of the beer
