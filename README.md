@@ -190,6 +190,8 @@ Note that, similar to the `ui` setup, we state `renderPlot` when constructing a 
 
 The first tab we're creating is a heatmap of the number of breweries. We'll do this with the `plot_usmap` function. Due to the difference in ways `plot_usmap` is called for US level vs state level, we'll need to generate two scenarios with an `if-else` block. On the US level, the plot uses a variable named `state` representing the two character state initials to place values on the map. On the state level, the plot uses a variable named `fips` representing the 5 number fips code that identifies state and county. 
 
+Note that the state selected in the app is referenced with `input$state_choice`.
+
 ``` r 
     # Brewery Density Map Plot
     output$plot1 <- renderPlot({
@@ -265,6 +267,44 @@ The following US pie chart is generated.
 <p align="center">
   <img src="README_files/us-pie.png" width="500">
 </p>
+
+### ABV and IBU
+
+In this final Tab, we plot boxplots of ABV and IBU per beer type. Here, we can use the checkboxes to select the beer types for a more direct comparison. For both plots, we need to filter the data to the state selected and the beer choice selected. 
+
+``` r 
+    # ABV Plot
+    output$plot3 <- renderPlotly({
+      
+      # Filter to selected beer type 
+      abv_dat <- df %>% 
+        filter(style %in% input$beer_choice,  
+              if(input$state_choice != "All States") state == input$state_choice else state == state)
+      
+      # Make plot
+      abv_plot <- plot_ly(abv_dat, y = ~abv, color = ~style, type = "box")
+      abv_plot  %>% 
+        layout(title = "Beer ABV")
+
+    })
+    
+    # IBU Plot
+    output$plot4 <- renderPlotly({
+      
+      # Filter to selected beer type 
+      ibu_dat <- df %>% 
+        filter(style %in% input$beer_choice,  
+               if(input$state_choice != "All States") state == input$state_choice else state == state)
+      
+      # Make plot
+      ibu_plot <- plot_ly(ibu_dat, y = ~abv, color = ~style, type = "box")
+      ibu_plot  %>% 
+        layout(title = "Beer IBU")
+      
+    })
+```
+
+The following US boxplots and filtered boxplots are generated. 
 
 ## Connecting the App a
 Create an account at https://www.shinyapps.io/
