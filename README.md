@@ -233,6 +233,38 @@ The following US and CO map is generated.
   <img src="README_files/co-map.png" width="400">
 </p>
 
+### Beer Types
+
+The second tab we're creating is a circle map of the proportion of beer types. We will use `plotly` to do this. First we have to filter the dataset and create a proportion variable. Then, we can create the plot and design the layout. 
+
+``` r
+    # Pie Chart
+    output$plot2 <- renderPlotly({
+      
+      # Summarize beer types over selected state
+      type_dat <- df %>% 
+        filter(if(input$state_choice != "All States") state == input$state_choice else state == state) %>% 
+        group_by(style) %>% 
+        summarise(N = n()) %>% 
+        ungroup() %>% 
+        mutate(prop = N/sum(N)) %>% 
+        arrange(desc(prop))
+      
+      
+      # Make plot
+      type_plot <- plot_ly(type_dat, labels = ~style, values = ~N, type = 'pie')
+      type_plot %>% layout(title = 'United States Beer Types',
+                          xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+                          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+    })
+```
+
+The following US pie chart is generated. 
+
+<p align="center">
+  <img src="README_files/us-pie.png" width="500">
+</p>
 
 ## Connecting the App a
 Create an account at https://www.shinyapps.io/
