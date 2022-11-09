@@ -229,8 +229,8 @@ Note that here I define the `height` and `width` at the end of the function rath
 The following US and CO map is generated. 
 
 <p align="center">
-  <img src="README_files/us-map.png" width="500">
-  <img src="README_files/co-map.png" width="500">
+  <img src="README_files/us-map.png" width="400">
+  <img src="README_files/co-map.png" width="400">
 </p>
 
 
