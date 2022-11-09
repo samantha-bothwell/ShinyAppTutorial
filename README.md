@@ -230,6 +230,7 @@ The following US and CO map is generated.
 
 <p align="center">
   <img src="README_files/us-map.png" width="500">
+  <img src="README_files/co-map.png" width="500">
 </p>
 
 <p align="center">
