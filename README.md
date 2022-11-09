@@ -229,7 +229,11 @@ Note that here I define the `height` and `width` at the end of the function rath
 The following US and CO map is generated. 
 
 <p align="center">
-  <img src="README_files/panels.png" width="500">
+  <img src="README_files/us-map.png" width="500">
+</p>
+
+<p align="center">
+  <img src="README_files/co-map.png" width="500">
 </p>
 
 ## Connecting the App a
