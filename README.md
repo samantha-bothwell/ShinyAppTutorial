@@ -311,7 +311,16 @@ The following US boxplots and filtered boxplots are generated.
   <img src="README_files/box-sub.png" width="500">
 </p>
 
-## Connecting the App a
-Create an account at https://www.shinyapps.io/
+## Connecting the App
+
+1. Create an account at https://www.shinyapps.io/. 
+2. Install the `rsconnect` package in R. 
+3. On the ShinyApps site, navigate to 'Account > Tokens'. Click 'Show'. You should see what's below. Click 'Show secret' then copy and paste and run the code in R. This connects R with your ShinyApp account. 
+<p align="center">
+  <img src="README_files/box-sub.png" width="500">
+</p>
+5. Run `deployApp()` in R and voila! You have a ShinyApp!
+
+
 
 
