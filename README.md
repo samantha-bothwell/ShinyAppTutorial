@@ -307,8 +307,8 @@ In this final Tab, we plot boxplots of ABV and IBU per beer type. Here, we can u
 The following US boxplots and filtered boxplots are generated. 
 
 <p align="center">
-  <img src="README_files/box-all.png" width="350">
-  <img src="README_files/box-sub.png" width="350">
+  <img src="README_files/box-all.png" width="400">
+  <img src="README_files/box-sub.png" width="400">
 </p>
 
 ## Connecting the App a
