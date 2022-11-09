@@ -233,9 +233,6 @@ The following US and CO map is generated.
   <img src="README_files/co-map.png" width="500">
 </p>
 
-<p align="center">
-  <img src="README_files/co-map.png" width="500">
-</p>
 
 ## Connecting the App a
 Create an account at https://www.shinyapps.io/
