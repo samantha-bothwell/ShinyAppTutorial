@@ -152,7 +152,7 @@ Notice that in each tabPanel, we specify the plot that will go on that tab. If i
 
 ## Designing the Server
 
-Before setting code up in the server, I usually run it within an R script to make sure everything works well. It's easier to modify your code outside of the app then when you're working within the server code. We are designing 4 plots with the following skeleton 
+Before setting code up in the server, I usually run it within an R script to make sure everything works well. It's easier to modify your code outside of the app then when you're working within the server code. We are designing 4 plots with the following skeleton. 
 
 ``` r 
 server <- function(input, output) {
@@ -184,8 +184,53 @@ server <- function(input, output) {
 }
 ```
 
+Note that, similar to the `ui` setup, we state `renderPlot` when constructing a `plot` or `ggplot` object and `renderPlotly` when constructing a `plotly` object. 
+
 ### Brewery Density 
 
+The first tab we're creating is a heatmap of the number of breweries. We'll do this with the `plot_usmap` function. Due to the difference in ways `plot_usmap` is called for US level vs state level, we'll need to generate two scenarios with an `if-else` block. On the US level, the plot uses a variable named `state` representing the two character state initials to place values on the map. On the state level, the plot uses a variable named `fips` representing the 5 number fips code that identifies state and county. 
+
+``` r 
+    # Brewery Density Map Plot
+    output$plot1 <- renderPlot({
+        
+        # subset and summarize data
+        if(input$state_choice == "All States"){
+          # filter data
+          dens_dat <- df %>% group_by(state) %>% summarise(N = n())
+          # make plot
+          dens_plot <- plot_usmap(data = dens_dat, values = "N", labels = TRUE, label_color = "white") + 
+            scale_fill_continuous(type = "viridis", name = "Brewery Count") +
+            labs(title = "Brewery Density", subtitle = "per U.S. State")
+          
+        }else{
+          # filter data
+          dens_dat <- df %>% group_by(fips) %>% 
+            summarise(N = n(), county = county) %>% slice(1)
+          # make plot
+          state_input = input$state_choice
+          dens_plot <- plot_usmap(data = dens_dat, values = "N", include = input$state_choice,
+                                  regions = "county", labels = TRUE, label_color = "white") + 
+            scale_fill_continuous(type = "viridis", name = "Brewery Count") +
+            labs(title = "Brewery Density", subtitle = paste("per", state_input, "County"))
+        }
+        
+        dens_plot + 
+          theme(plot.title = element_text(face = "bold", hjust = 0.5, size = 20)) + 
+          theme(plot.subtitle = element_text(hjust = 0.5, face = "bold.italic", size = 15)) + 
+          theme(legend.key.size = unit(1, 'cm'), legend.title = element_text(size=14), 
+                legend.text = element_text(size=10), legend.position = "bottom")
+        
+    }, height = 800, width = 1200)
+```
+
+Note that here I define the `height` and `width` at the end of the function rather than in the `ui` `plotOutput` function. It can be done either way. 
+
+The following US and CO map is generated. 
+
+<p align="center">
+  <img src="README_files/panels.png" width="500">
+</p>
 
 ## Connecting the App a
 Create an account at https://www.shinyapps.io/
